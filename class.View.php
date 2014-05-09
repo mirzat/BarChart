@@ -35,7 +35,8 @@ class View{
 		// Print Headers
 		echo '<!doctype html><html><meta charset="UTF-8"><head><link rel="stylesheet" type="text/css" href="styles.css"></head><body>';	
 		echo '<h1>'.$this->month.', '.$this->year.'</h1>';
-	
+		
+		echo '<div class="calendarTable">';
 		//When post data is empty print a form
 		if(empty($data))
 			echo '<form method="POST">';
@@ -74,7 +75,7 @@ class View{
 			
 			// Print submit button
 			if(empty($data)){
-				echo '<input type="submit" value="Save and Display">';
+				echo '<br /><br /><input type="submit" value="Save and Display">';
 				echo '</form>';
 			}
 			
@@ -87,7 +88,7 @@ class View{
 				echo '<br /><br /><a href="index.php">Click here to add more notes</a>';
 			}
 			
-			echo '</body></html>';
+			echo '</div></body></html>';
 	}
 }
 ?>
